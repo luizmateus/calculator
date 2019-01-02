@@ -5,6 +5,14 @@ import {
     View,
 } from 'react-native'
 
+const Display = props =>
+    <View style={styles.display}>
+        <Text style={styles.displayValue}
+            numberOfLines={1}>{props.value}</Text>
+    </View>
+
+export default Display
+
 const styles = StyleSheet.create({
     display: {
         flex: 1,
@@ -18,9 +26,3 @@ const styles = StyleSheet.create({
         color: '#fff'
     }
 })
-
-export default props =>
-    <View style={styles.display}>
-        <Text style={styles.displayValue}
-            numberOfLines={1}>{props.value}</Text>
-    </View>
